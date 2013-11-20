@@ -1,0 +1,46 @@
+{
+    "needs": [
+        {
+            "path": "image_utility_toolbox", 
+            "url": "git://github.com/gregfreeman/image_utility_toolbox.git"
+        }, 
+        {
+            "path": "gf_utility_toolbox", 
+            "url": "git://github.com/gregfreeman/gf_utility_toolbox.git"
+        }, 
+        {
+            "path": "experiment_framework", 
+            "url": "git://github.com/gregfreeman/experiment_framework.git"
+        },
+        {
+            "path": "spotbox", 
+            "url": "git://github.com/gregfreeman/spot.git"
+        },
+        {	
+            "path": "compressive_sensed_image", 
+            "url": "git://github.com/gregfreeman/compressive_sensed_image.git"
+        },
+        {
+            "path": "image_quality_toolbox", 
+            "url": "git://github.com/gregfreeman/image_quality_toolbox.git"
+        },
+        {
+            "path": "libsvm", 
+            "url": "git://github.com/gregfreeman/libsvm.git"
+        },
+        {
+            "path": "gf_fitting_toolbox",
+        	"url": "gfreeman@bowser.ece.utexas.edu:~/git/gf_fitting_toolbox.git"
+        },
+        {
+            "path": "wavelab850",
+        	"url": "git://github.com/gregfreeman/wavelab850.git"            
+        }
+     ],
+    "matlab": {
+        "folders":["libsvm/matlab","wavelab850/Orthogonal"],
+        "m_setup":"true",
+        "commands":["setup_experiment_framework"]
+
+    }
+}

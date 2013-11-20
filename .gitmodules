@@ -1,0 +1,24 @@
+[submodule "image_utility_toolbox"]
+	path = image_utility_toolbox
+	url = git://github.com/gregfreeman/image_utility_toolbox.git
+[submodule "gf_utility_toolbox"]
+	path = gf_utility_toolbox
+	url = git://github.com/gregfreeman/gf_utility_toolbox.git
+[submodule "experiment_framework"]
+	path = experiment_framework
+	url = git://github.com/gregfreeman/experiment_framework.git
+[submodule "spotbox"]
+	path = spotbox
+	url = git://github.com/gregfreeman/spot.git
+[submodule "compressive_sensed_image"]
+	path = compressive_sensed_image
+	url = git://github.com/gregfreeman/compressive_sensed_image.git
+[submodule "image_quality_toolbox"]
+	path = image_quality_toolbox
+	url = git://github.com/gregfreeman/image_quality_toolbox.git
+[submodule "libsvm"]
+	path = libsvm
+	url = git://github.com/gregfreeman/libsvm.git
+[submodule "wavelab850"]
+	path = wavelab850
+	url = git://github.com/gregfreeman/wavelab850.git
