@@ -33,12 +33,25 @@
         	"url": "gfreeman@bowser.ece.utexas.edu:~/git/gf_fitting_toolbox.git"
         },
         {
+            "path": "gf_solvers",
+        	"url": "gfreeman@bowser.ece.utexas.edu:~/git/gf_solvers.git"            
+        },
+        {
             "path": "wavelab850",
         	"url": "git://github.com/gregfreeman/wavelab850.git"            
+        },
+        {
+            "path": "tfocs",
+        	"url": "https://github.com/mcg1969/TFOCS.git"            
         }
      ],
     "matlab": {
-        "folders":["libsvm/matlab","wavelab850/Orthogonal"],
+        "folders":["compressive_sensed_image/reconstruct",
+                "compressive_sensed_image/structure",
+                "compressive_sensed_image/reconstruct/SparseLab/SharedTools",
+                "compressive_sensed_image/reconstruct/SparseLab/Transforms",
+                "libsvm/matlab",
+                "wavelab850/Orthogonal"],
         "m_setup":"true",
         "commands":["setup_experiment_framework"]
 
