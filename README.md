@@ -1,7 +1,7 @@
 Targeted L1L2  
 ====================================
 
-This code performs targeted L1-L2 reconstruction
+This code implements targeted L1-L2 reconstruction
 
 Installation
 ------------
@@ -14,11 +14,12 @@ Download the code via git
 
 Download the submodules via git
 
-
+	cd targeted_l1l2
     git submodule init
     git submodule update
 
-	Download data files  ....   TBD
+	Download data files  http://research-t-l1l2.s3-website-us-east-1.amazonaws.com/data/refimgs.zip
+	unzip images to data/refimgs512x512/ 
 
 Build MEX files
 

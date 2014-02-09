@@ -27,7 +27,7 @@ events.storeOutputData= @pngStoreOutputData;
 events.startTasks = @( foldername, ntasks ) startTasksHtmlPost( foldername, ntasks, 'greg.freeman@utexas.edu' );
 events.updateTask= @updateTaskHtmlPost;
 
-events.setup_command='cd  ~/experiment/natural_optim/;setup_natural_optim;';
+events.setup_command='cd  ~/experiment/targeted_l1l2/;setup_targeted_l1l2;';
 
 
 testRunner(paramset,events);
