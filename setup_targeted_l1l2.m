@@ -1,5 +1,4 @@
 % function setup_targeted_l1l2
-function setup_targeted_l1l2 
 
 fullpath = mfilename('fullpath');
 idx      = find(fullpath == filesep);

@@ -24,10 +24,10 @@
 	url = git://github.com/gregfreeman/wavelab850.git
 [submodule "gf_fitting_toolbox"]
 	path = gf_fitting_toolbox
-	url = gfreeman@bowser.ece.utexas.edu:~/git/gf_fitting_toolbox.git
+	url = git://github.com/gregfreeman/gf_fitting_toolbox.git
 [submodule "tfocs"]
 	path = tfocs
 	url = https://github.com/mcg1969/TFOCS.git
 [submodule "gf_solvers"]
 	path = gf_solvers
-	url = gfreeman@bowser.ece.utexas.edu:~/git/gf_solvers.git
+	url = git://github.com/gregfreeman/gf_solvers.git
