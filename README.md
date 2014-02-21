@@ -18,16 +18,21 @@ Download the submodules via git
     git submodule init
     git submodule update
 
-	Download data files  http://research-t-l1l2.s3-website-us-east-1.amazonaws.com/data/refimgs.zip and unzip to data/refimgs512x512/ 
+Download data files
+
+	datafiles:  http://research-t-l1l2.s3-website-us-east-1.amazonaws.com/data/refimgs.zip 
+	unzip location:  ../data/refimgs512x512/  	
+	
 	wget http://research-t-l1l2.s3-website-us-east-1.amazonaws.com/data/refimgs.zip
 	mkdir ../data
 	unzip refimgs.zip -d ../data/refimgs512x512
 
 Build MEX files
 
-    cd utility/libsvm/matlab
+	Open MATLAB
+    cd libsvm/matlab
     make
-    cd ../../..
+    cd ../..
     
 
 

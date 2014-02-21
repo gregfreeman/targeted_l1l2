@@ -10,7 +10,12 @@ function [outputImage,results] = targeted_l1l2(image,settings)
 %     image - image number
 %     showImage - show an image figure for each outer iteration
 %     l1_prior - {'use_l1','use_r'} subtule difference in prior definition
-%
+%     prior_data - prior for image bands.  array of structure by band with
+%     elements
+%         l1 - l1 prior
+%         l2 - l2 prior
+%         r - r prior
+%%
 
 sz=size(image);
 
@@ -24,8 +29,11 @@ if ~isfield(settings,'est_z')
     settings.est_z='em';
 end
 if ~isfield(settings,'l1_prior')
-%     settings.l1_prior='use_l1';
+%     settings.l1_prior='use_l1';   
     settings.l1_prior='use_r';
+end
+if ~isfield(settings,'prior_data')
+    error('missing prior data')
 end
 
 % Initialize with LASSO solution
@@ -54,14 +62,7 @@ nIterationsOuter=15;
 levels=5;
 nBands=3*levels+1;
 startBand=settings.startBand;
-
-% load prior
-prior_data=load('l1l2_pristine_stats');
-if settings.cheat_r
-    prior=prior_data.stats{settings.image};
-else
-    prior=prior_data.stats_wo_image{settings.image};   
-end
+prior=settings.prior_data;
 
 % setup optimization function and parameters
 eval= weighted_l1_l2_evaluator(Phi,fine_samples,vfine);

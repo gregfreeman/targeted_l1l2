@@ -1,26 +1,19 @@
 function targeted_l1l2_varybands
 
 param1.field='delta';
-% param1.values=num2cell(0.1:0.1:0.4);
 param1.values=num2cell(0.05:0.05:0.95);
 
 param2.field='image';
 param2.values=num2cell(1:17);
 
-param3.field='cheat_r';
-param3.values={false};
-
-param4.field='cheat_z';
-param4.values={'em'};
-
-param5.field='startBand';
-param5.values={2,5,8,11,13};
+param3.field='startBand';
+param3.values={2,5,8,11,14};
 
 
-paramset=[param1,param2,param3,param4,param5];
+paramset=[param1,param2,param3];
 
 events=struct();
-events.runExperiment=@targeted_l1l2;
+events.runExperiment=@run_targeted_l1l2;
 events.loadInputData=@(settings) CSEvaluationImageGetter(settings);
 events.evaluateMetrics= @extendedQualityMetrics;
 events.storeOutputData= @pngStoreOutputData;
@@ -30,5 +23,14 @@ events.updateTask= @updateTaskHtmlPost;
 events.setup_command='cd  ~/experiment/targeted_l1l2/;setup_targeted_l1l2;';
 
 
+% load prior data
+prior_data=load('l1l2_pristine_stats');
+
 testRunner(paramset,events);
 
+function [outputImage,results] = run_targeted_l1l2(image,settings) 
+settings.prior_data=prior_data.stats_wo_image{settings.image};   
+[outputImage,results] = targeted_l1l2(image,settings) ;
+end
+
+end
