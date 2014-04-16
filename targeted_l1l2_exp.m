@@ -6,10 +6,7 @@ param1.values=num2cell(0.05:0.05:0.95);
 param2.field='image';
 param2.values=num2cell(1:17);
 
-param3.field='l1_prior';
-param3.values={'use_l1','use_r'};
-
-paramset=[param1,param2,param3];
+paramset=[param1,param2];
 
 events=struct();
 events.runExperiment=@run_targeted_l1l2;

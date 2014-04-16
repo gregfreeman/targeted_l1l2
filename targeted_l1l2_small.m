@@ -9,9 +9,7 @@ param2.values=num2cell(1:17);
 param3.field='image_options';
 param3.values={{'cropsize',[128 128]}};
 
-param4.field='l1_prior';
-param4.values={'use_l1','use_r'};
-paramset=[param1,param2,param3,param4];
+paramset=[param1,param2,param3];
 
 events=struct();
 events.runExperiment=@run_targeted_l1l2;
